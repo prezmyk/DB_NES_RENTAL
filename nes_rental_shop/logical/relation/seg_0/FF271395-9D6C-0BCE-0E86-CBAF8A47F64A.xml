@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="developers_countries_fk" directorySegmentName="seg_0" id="FF271395-9D6C-0BCE-0E86-CBAF8A47F64A">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:16:05 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+<item key="DAC9FE19-C9CB-3F72-942C-C80597B35FE2" value="true"/>
+</engineerTo>
+<sourcePk>2FC92D43-19EC-B4D2-6727-80F69491CCA9</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4B2E81EF-54FE-FADC-B6CA-44CB6DD5BF4F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>08FDCE2E-F0B7-BC39-0C4B-21AB1FA52F96</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

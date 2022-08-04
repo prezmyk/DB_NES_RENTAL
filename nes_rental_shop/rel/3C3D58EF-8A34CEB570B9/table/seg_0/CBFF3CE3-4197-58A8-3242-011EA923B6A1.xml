@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CBFF3CE3-4197-58A8-3242-011EA923B6A1" name="games_cartridges">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="game_id" id="37413ADC-F3EC-1DFE-78FB-31E4F075B2AC">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Multiple Primary Key with column cartridge_id of games_cartridges table.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="25835A8A-FDE4-B61A-4867-0B8929D6D575" referredColumn="FC9B028D-CAFD-C33F-D10D-2ABAED6D6199"/>
+</associations>
+</Column>
+<Column name="cartridge_id" id="EE3EF460-08A6-E5B0-40AC-1CC75F6C1066">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Multiple Primary Key with column game_id of games_cartridges  table.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F92662D2-3A3E-A2A7-33E5-4C116604B3C0" referredColumn="3EB03058-B77C-29A3-1E57-B658F96871A1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="410C43B7-D8ED-A5D7-0A28-D61945611776" name="games_cartriges_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37413ADC-F3EC-1DFE-78FB-31E4F075B2AC"/>
+<colUsage columnID="EE3EF460-08A6-E5B0-40AC-1CC75F6C1066"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A98E808-FB26-020F-580C-048AD2B352C5" name="games_cartriges_games_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>5822BEA9-654A-AFCE-F5D9-5F558F3CB336</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37413ADC-F3EC-1DFE-78FB-31E4F075B2AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D50937D7-6B9A-FE62-C61A-929246BA06F8" name="games_cartriges_cartriges_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>5822BEA9-654A-AFCE-F5D9-5F558F3CB336</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE3EF460-08A6-E5B0-40AC-1CC75F6C1066"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="352865BF-0B16-3DF6-E3C4-331F784BAA39" name="employees">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>D8B1ADA4-495B-813D-3BEB-C1B52EB48B6C</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="employee_id" id="70CAA1C6-078F-43EC-F9EC-84BA432480AC">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of empolyees table. Syssdate +  cust_emp sequence. ]]></commentInRDBMS>
+<generatorID>777DF4EA-03D1-E3A5-A152-DEFB6F708AA9</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>CONCAT(TO_NUMBER(TO_CHAR(sysdate, &apos;YYMMDD&apos;)),cust_emp_seq.nextval)</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_name" id="7D147752-C417-636E-81A8-34FC0783D706">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Employee's first name.]]></commentInRDBMS>
+<generatorID>BD5290FA-2933-B15B-5175-9A1D5DA6818D</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="1C92E8CB-7148-7E2B-CFE1-75B577656558">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Employee's last name.]]></commentInRDBMS>
+<generatorID>0CCEED22-87B1-85E6-7C08-37412B0DBD16</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth_date" id="48C78582-BF6A-4F23-288E-D6A95A3889EA">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Employee's date of birth]]></commentInRDBMS>
+<generatorID>B6909EB1-312A-AF6D-16A2-19B1060B1013</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hire_date" id="A972DD74-B8B2-E342-66A2-BFA477811649">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Hire date of employee.]]></commentInRDBMS>
+<generatorID>E60039BA-3F11-13E5-D83F-3E8254C21861</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sex" id="3FE545DA-8C99-2A17-D8F8-6858C3274E90">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sex (M,F).]]></commentInRDBMS>
+<generatorID>DA11260E-B67D-9534-A77A-17875B0D6598</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>ck_employees_sex</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description=""/>
+<valueDef value="M" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address_id" id="00DC8386-36CE-3202-D4D8-2343DB725BFD">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-18 13:10:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Assress  ID for the employees. Foreign key to address_id column in the addresses table.]]></commentInRDBMS>
+<generatorID>25ADABE6-7799-2A34-6499-0E5BB28A7ED0</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E26AB0D0-BB2E-E55E-0446-2F424E61305B" referredColumn="B922ADD9-F9A9-D545-20DF-432231568FEC"/>
+</associations>
+</Column>
+<Column name="db_user" id="7FECD1FD-957A-31D1-9262-EA8F875BB9CA">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 10:02:53 UTC</createdTime>
+<generatorID>A7D52738-1301-A98E-D4DC-76FB4A3094B5</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="29B393DC-D83A-ED65-5D55-8C672FA61602" name="employees_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>2B55F0EB-5D72-34CC-9A20-0D8DD36B51E8</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70CAA1C6-078F-43EC-F9EC-84BA432480AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DCE272CA-AA95-9AB0-B08D-EEAAE3849968" name="employees_addresses_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-18 14:27:49 UTC</createdTime>
+<generatorID>6EFFBBAF-F4B1-E270-B754-75A10DCDDD3F</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00DC8386-36CE-3202-D4D8-2343DB725BFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

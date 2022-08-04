@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="25835A8A-FDE4-B61A-4867-0B8929D6D575" containerWithKeyObject="CBFF3CE3-4197-58A8-3242-011EA923B6A1" localFKIndex="7A98E808-FB26-020F-580C-048AD2B352C5" name="games_cartriges_games_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>5822BEA9-654A-AFCE-F5D9-5F558F3CB336</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<referredTableLongName>games</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FF9BDB39-4B19-D50C-2FF4-5936922070DA</referredTableID>
+<keyObject>B6D064FF-EA22-EF0C-05EE-1A3C4BA27793</keyObject>
+<referredKeyID>B6D064FF-EA22-EF0C-05EE-1A3C4BA27793</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>game_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

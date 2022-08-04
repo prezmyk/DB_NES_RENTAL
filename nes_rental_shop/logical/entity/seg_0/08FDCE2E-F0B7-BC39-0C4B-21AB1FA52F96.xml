@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="08FDCE2E-F0B7-BC39-0C4B-21AB1FA52F96" name="developers">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 10:01:25 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="developer_id" id="821673C2-8709-44C6-FCF3-0D48F85C6BC7">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 10:01:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of developers table.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="9FF3DFD6-D31B-D5B8-6D96-90B9C3C31767">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 10:01:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of company.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estb_date" id="083525F0-5CCD-42B2-D3A8-65068F176A31">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 10:02:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Release date.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="country_id" id="BEADBEF4-EAAE-DA99-EA86-3317657BACAF">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 12:22:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country ID for the developers. Foreign key to country_id column in the countries table.]]></commentInRDBMS>
+<generatorID>FF271395-9D6C-0BCE-0E86-CBAF8A47F64A</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3D677F73-8DA1-C18C-98CB-269663131A61</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3BAE5112-4615-FF4C-B6F3-616255D785D1" name="developers_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 10:01:56 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>821673C2-8709-44C6-FCF3-0D48F85C6BC7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

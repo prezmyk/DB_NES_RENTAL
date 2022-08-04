@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6E1B18FC-9D8A-AD55-246C-6E70D2716E69" name="games">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 09:49:26 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="game_id" id="69917EA6-339A-901F-E4A9-DA582CDEC709">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 09:49:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of games table.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="title" id="49A6AD33-F064-F856-11E0-0C04FAA232D4">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 09:50:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the game.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="grelease" id="FDAF66BE-DA03-C40E-BAE5-3D1F06A2A3BD">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 09:51:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of published.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gmode" id="412D65A2-3BE0-1EFF-BD9C-D7C7925475EE">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 09:57:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[Mode of the game. (single-player, multiplayers, gun).]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<constraintName>ck_games_mode</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<listOfValues>
+<valueDef value="gun" description=""/>
+<valueDef value="multiplayers" description=""/>
+<valueDef value="single-player" description=""/>
+</listOfValues>
+<defaultValue>single-player</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="developer_id" id="9F67A854-DE15-4F24-86D3-443F77F444E0">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 12:22:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Developer ID for the game.  Foreign key to developer_id column in the developers table.]]></commentInRDBMS>
+<generatorID>E754FB3C-928C-F769-E330-E8D96CD10DB4</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>821673C2-8709-44C6-FCF3-0D48F85C6BC7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="genre_id" id="5F50B715-4FE7-B107-5641-AD32C56C183D">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 12:22:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[Genere ID for the game.  Foreign key to genre_id column in the genres table.]]></commentInRDBMS>
+<generatorID>D1098921-15DB-3E80-2E64-56AAAAD563E6</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>6F33F344-8CA4-51BF-DD55-65BA90405AB4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AA63B266-0CFF-58B8-8E7D-DF00D433BDB1" name="games_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 09:50:00 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>69917EA6-339A-901F-E4A9-DA582CDEC709</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

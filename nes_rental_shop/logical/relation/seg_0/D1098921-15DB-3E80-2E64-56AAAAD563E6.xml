@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="games_genres fk" directorySegmentName="seg_0" id="D1098921-15DB-3E80-2E64-56AAAAD563E6">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:14:37 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+<item key="DAC9FE19-C9CB-3F72-942C-C80597B35FE2" value="true"/>
+</engineerTo>
+<sourcePk>34238152-4ECD-70CA-7161-D8E9C71AA498</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CF90A78D-8479-5376-6C46-0E6BE6ABCA67</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6E1B18FC-9D8A-AD55-246C-6E70D2716E69</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

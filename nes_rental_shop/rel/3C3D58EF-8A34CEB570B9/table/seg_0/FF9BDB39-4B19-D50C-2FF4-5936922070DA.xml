@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FF9BDB39-4B19-D50C-2FF4-5936922070DA" name="games">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>6E1B18FC-9D8A-AD55-246C-6E70D2716E69</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="game_id" id="FC9B028D-CAFD-C33F-D10D-2ABAED6D6199">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of games table.]]></commentInRDBMS>
+<generatorID>69917EA6-339A-901F-E4A9-DA582CDEC709</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>game_id_seq</autoIncrementSequenceName>
+</Column>
+<Column name="title" id="C91FD120-FDE4-9432-5063-B745BD1215C2">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the game.]]></commentInRDBMS>
+<generatorID>49A6AD33-F064-F856-11E0-0C04FAA232D4</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="grelease" id="BC91794B-80CE-6CD3-5EA6-901A5DA6F847">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of published.]]></commentInRDBMS>
+<generatorID>FDAF66BE-DA03-C40E-BAE5-3D1F06A2A3BD</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gmode" id="4DB62A1C-2077-70CB-35D6-4422E31D6E1D">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Mode of the game. (single-player, multiplayers, gun).]]></commentInRDBMS>
+<generatorID>412D65A2-3BE0-1EFF-BD9C-D7C7925475EE</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>ck_games_mode</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<listOfValues>
+<valueDef value="gun" description=""/>
+<valueDef value="multiplayers" description=""/>
+<valueDef value="single-player" description=""/>
+</listOfValues>
+<defaultValue>single-player</defaultValue>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="developer_id" id="A810637E-BC6C-EA46-A292-4FAAB6F560FA">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Developer ID for the game.  Foreign key to developer_id column in the developers table.]]></commentInRDBMS>
+<generatorID>9F67A854-DE15-4F24-86D3-443F77F444E0</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8F31779C-42DF-A5BB-BFB6-31B23A9A6116" referredColumn="26737CA0-6F6C-56CB-4979-83EF2AB3EA0E"/>
+</associations>
+</Column>
+<Column name="genre_id" id="5804EEE1-255C-E81B-F681-B364DF6B6179">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Genere ID for the game.  Foreign key to genre_id column in the genres table.]]></commentInRDBMS>
+<generatorID>5F50B715-4FE7-B107-5641-AD32C56C183D</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EB641CB1-AAD2-F139-8271-A122B7353AB9" referredColumn="51133341-D4B9-559A-EB33-81DBB53FE6E5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B6D064FF-EA22-EF0C-05EE-1A3C4BA27793" name="games_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>AA63B266-0CFF-58B8-8E7D-DF00D433BDB1</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC9B028D-CAFD-C33F-D10D-2ABAED6D6199"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3CB9508-602C-0ED2-6560-83F60C5E1D6A" name="games_developers_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>E754FB3C-928C-F769-E330-E8D96CD10DB4</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A810637E-BC6C-EA46-A292-4FAAB6F560FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E24F0A89-EBFF-0B22-8AE2-6586F952BA17" name="games_genres_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>D1098921-15DB-3E80-2E64-56AAAAD563E6</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5804EEE1-255C-E81B-F681-B364DF6B6179"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

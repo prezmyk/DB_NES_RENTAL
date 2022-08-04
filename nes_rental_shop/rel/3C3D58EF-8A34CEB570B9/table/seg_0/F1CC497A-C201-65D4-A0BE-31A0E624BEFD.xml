@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F1CC497A-C201-65D4-A0BE-31A0E624BEFD" name="cartridges">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>350DF0AD-50EE-8DE0-E8BA-8A8582E6C372</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<ordsAlias>cartriges</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cartridge_id" id="3EB03058-B77C-29A3-1E57-B658F96871A1">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of cartridges table.]]></commentInRDBMS>
+<generatorID>FFB8144C-31A9-0C33-40B6-493EEA2CF728</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>cartridges_id_def</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>cartridges_id_seq.nextval</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementStartWith>1000</autoIncrementStartWith>
+<autoIncrementIncrementBy>10</autoIncrementIncrementBy>
+<autoIncrementMinValue>1000</autoIncrementMinValue>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementSequenceName>cartridges_id_seq</autoIncrementSequenceName>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+</Column>
+<Column name="title" id="64322988-8DBC-7E62-4C5E-BBCAE4A62AE0">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Optional name of cartridge. E.g Sports, 5 in 1. ]]></commentInRDBMS>
+<generatorID>DD406374-B3DE-190A-139C-6D6BA706B9D1</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="08025217-F709-C396-5B06-0DDE3D570979">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cost of the rental. Numbers divided by 5.]]></commentInRDBMS>
+<generatorID>CC0D54F3-80AB-FDEC-80BD-CCEC57AA1740</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>cartridges_price_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12cR2" definition="MOD(price, 0.5) = 0"/>
+</checkConstraint>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="color" id="CC95C416-138B-5FFF-D532-1631F5898736">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Optional color of the cartridge.]]></commentInRDBMS>
+<generatorID>D3FE46F8-B070-01D2-A661-079F8F6A8DF5</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="availability" id="578DDC6E-A4DB-A531-4C73-CA5F532B5F90">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[(Y,N,R)]]></commentInRDBMS>
+<generatorID>68712C05-B80C-6416-6BA5-B25DA98AE415</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>cartridge_availability_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="R" description=""/>
+<valueDef value="Y" description=""/>
+</listOfValues>
+<defaultValue>Y</defaultValue>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DCE74D0-E585-EE1E-696C-7D6B589AC1E4" name="cartridges_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>A36F90D6-57E2-4A3B-6D3F-CD21A5CDDEDD</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EB03058-B77C-29A3-1E57-B658F96871A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

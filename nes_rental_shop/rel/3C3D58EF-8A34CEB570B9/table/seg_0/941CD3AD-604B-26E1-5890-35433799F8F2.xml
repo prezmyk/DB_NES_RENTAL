@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="941CD3AD-604B-26E1-5890-35433799F8F2" name="customers">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>5475AB1D-6FA4-83AD-D78B-6B33D103DFA4</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="customer_id" id="06CAACC0-A038-5263-60DD-C767C86B0BD3">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of customers table. Syssdate +  cust_emp sequence.]]></commentInRDBMS>
+<generatorID>AE2EB758-29F1-BA14-FFFC-D1377644602A</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<defaultValue>CONCAT(TO_NUMBER(TO_CHAR(sysdate, &apos;YYMMDD&apos;)),cust_emp_seq.nextval)</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_name" id="6D7BFAD2-8A1B-57A6-FAAC-A59B0B3A5353">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer's first name.]]></commentInRDBMS>
+<generatorID>68CE5DD4-FABB-88F0-83C0-591514971C10</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="DBF8A463-E898-F6A7-7742-660B3D1F45B4">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cutomer's last name.]]></commentInRDBMS>
+<generatorID>EDDF2292-2350-A08F-0EE3-FEFE1BBDD82F</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="birth_date" id="9B836417-BE5E-5BC6-7332-88199CE6EEEF">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cutomer's date of birth.]]></commentInRDBMS>
+<generatorID>1A828539-2C77-8679-8A0A-E4999DEED0AC</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="patron_id" id="315368E9-3C52-724B-ABB9-913DB146A6DD">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patron ID of the customer who is under 18 years old.  Foreign key to customer_id column of customers table.]]></commentInRDBMS>
+<generatorID>427E2C9B-F55C-ACC3-DCB5-85DD6D4F2641</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91D7BCE2-4C65-A7D4-8551-FA4E2F119D49" referredColumn="06CAACC0-A038-5263-60DD-C767C86B0BD3"/>
+</associations>
+</Column>
+<Column name="sex" id="ACAE0D95-DA3C-B076-B50F-B2F6F4489EAA">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sex (M,F).]]></commentInRDBMS>
+<generatorID>35C9F186-7B58-A625-D6F2-697458507907</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>customers_sex_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description=""/>
+<valueDef value="M" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cre_date" id="4F15A50E-3640-26E1-5B57-689E1B01C2B6">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Creation date of customer's account. Sysdate.]]></commentInRDBMS>
+<generatorID>8F69463D-4D31-2D60-DBDA-F6B4FCAD90FA</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address_id" id="62464E6F-9907-6C57-DF1D-0B5F07268A45">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-18 13:10:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address ID for thecustomers.  Foreign key to address_id column in the addresses table.]]></commentInRDBMS>
+<generatorID>A329A600-3121-9234-59E5-4164927BA099</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="55251E2D-27AC-8196-2510-113C955F324F" referredColumn="B922ADD9-F9A9-D545-20DF-432231568FEC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3C9CC451-C817-4413-1B2F-8FA813D4BDFF" name="customers_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>69C5E69B-5F6D-41DD-C395-FC6F66990997</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06CAACC0-A038-5263-60DD-C767C86B0BD3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3BFBA5AD-AE43-4F7B-0AA3-38ABDAA56BC3" name="customers_customers_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>AA93069C-8A43-44BA-570A-1F6DD8355EA7</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="315368E9-3C52-724B-ABB9-913DB146A6DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EA03E33-1993-9468-E2A6-E000A02F292F" name="customers_addresses_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-18 14:27:49 UTC</createdTime>
+<generatorID>25BF1B70-59FC-726D-D48A-E213193EF0E8</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="62464E6F-9907-6C57-DF1D-0B5F07268A45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

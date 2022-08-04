@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C27679D7-34E5-C45B-9702-6E87A7AF380E" containerWithKeyObject="50AFB7F4-10DD-7187-2298-1E8DC6F35E92" localFKIndex="AD857CB6-2492-D9C5-37B0-EB2E65EDA91A" name="reservations_cartridges_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 15:48:48 UTC</createdTime>
+<generatorID>88F31AB2-78A4-436A-A4A4-22CB54EBEE26</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<referredTableLongName>cartridges</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F1CC497A-C201-65D4-A0BE-31A0E624BEFD</referredTableID>
+<keyObject>5DCE74D0-E585-EE1E-696C-7D6B589AC1E4</keyObject>
+<referredKeyID>5DCE74D0-E585-EE1E-696C-7D6B589AC1E4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cartridge_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

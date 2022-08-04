@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="au_reservations" directorySegmentName="seg_0" id="85031381-3144-A6F7-1934-172A423929FC">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-24 07:27:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<actions>DELETE</actions>
+<body><![CDATA[BEGIN;
+
+	UPDATE cartridges SET availability = 'Y'
+	WHERE cartridge_id = :old.cartridge_id;
+
+END;
+]]></body>
+<triggerTime>AFTER</triggerTime>
+<table>50AFB7F4-10DD-7187-2298-1E8DC6F35E92</table>
+</TriggerOraclev10g>

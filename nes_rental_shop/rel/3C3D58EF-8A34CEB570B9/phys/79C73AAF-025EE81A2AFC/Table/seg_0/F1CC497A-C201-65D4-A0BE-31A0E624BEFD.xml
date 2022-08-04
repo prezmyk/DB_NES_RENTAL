@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="cartridges" directorySegmentName="seg_0" id="F1CC497A-C201-65D4-A0BE-31A0E624BEFD">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="price" id="08025217-F709-C396-5B06-0DDE3D570979">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cartridge_id" id="3EB03058-B77C-29A3-1E57-B658F96871A1">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<autoIncrementDDL>DEFAULT_CLAUSE</autoIncrementDDL>
+<defaultValue>cartridges_id_seq.nextval</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="availability" id="578DDC6E-A4DB-A531-4C73-CA5F532B5F90">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<defaultValue>Y</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="title" id="64322988-8DBC-7E62-4C5E-BBCAE4A62AE0">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="color" id="CC95C416-138B-5FFF-D532-1631F5898736">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="cartridges_pk" id="5DCE74D0-E585-EE1E-696C-7D6B589AC1E4">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

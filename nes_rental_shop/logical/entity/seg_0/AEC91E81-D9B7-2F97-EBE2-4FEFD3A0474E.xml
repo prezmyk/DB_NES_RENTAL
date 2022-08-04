@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AEC91E81-D9B7-2F97-EBE2-4FEFD3A0474E" name="reservations">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:24:56 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="reservation_id" id="FD6ECDA8-1CCF-F73D-79C4-F17F680CA29B">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:27:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of reservations table.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="res_date" id="3EA2EEE0-C6D8-5000-0F50-A2A3C67959EA">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:27:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Reservation date. Only for the same day of rental.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<constraintName>reservaions_res_date_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="customer_id" id="2CAB22EF-4C90-D6D9-E3EA-2F79251F96DD">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:30:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer ID for the reservation.  Foreign key to customer_id column in the customers table.]]></commentInRDBMS>
+<generatorID>CD5F4921-91AA-2341-937D-99A6CE6E7BB0</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<referedAttribute>AE2EB758-29F1-BA14-FFFC-D1377644602A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cartridge_id" id="67FB9CD4-6636-5AC8-39DC-172A25133C2B">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:30:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cartridge ID for the reservation..  Foreign key to cartridge_id column in the cartridges table.]]></commentInRDBMS>
+<generatorID>88F31AB2-78A4-436A-A4A4-22CB54EBEE26</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<referedAttribute>FFB8144C-31A9-0C33-40B6-493EEA2CF728</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D21A82C5-8117-66CD-951D-4C1B01BB4AB0" name="rezervations pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:28:30 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>FD6ECDA8-1CCF-F73D-79C4-F17F680CA29B</newElementsIDs>
+<usedAttributes>
+<attributeRef>FD6ECDA8-1CCF-F73D-79C4-F17F680CA29B</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="84C816A8-DAF6-32FC-4975-0336AD11EDC1" name="reservations_cart_un">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:39:29 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<newElementsIDs>67FB9CD4-6636-5AC8-39DC-172A25133C2B</newElementsIDs>
+<usedAttributes>
+<attributeRef>67FB9CD4-6636-5AC8-39DC-172A25133C2B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

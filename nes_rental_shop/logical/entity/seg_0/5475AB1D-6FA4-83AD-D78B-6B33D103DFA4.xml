@@ -1,0 +1,164 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5475AB1D-6FA4-83AD-D78B-6B33D103DFA4" name="customers">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:04:08 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="customer_id" id="AE2EB758-29F1-BA14-FFFC-D1377644602A">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:06:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of customers table. Syssdate +  cust_emp sequence.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12cR2" definition="LENGTH(customer_id) = 9"/>
+</checkConstraint>
+<defaultValue>CONCAT(TO_NUMBER(TO_CHAR(sysdate, &apos;YYMMDD&apos;)),cust_emp_seq.nextval)</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="first_name" id="68CE5DD4-FABB-88F0-83C0-591514971C10">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:07:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer's first name.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="last_name" id="EDDF2292-2350-A08F-0EE3-FEFE1BBDD82F">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:07:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cutomer's last name.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="birth_date" id="1A828539-2C77-8679-8A0A-E4999DEED0AC">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:08:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cutomer's date of birth.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="patron_id" id="427E2C9B-F55C-ACC3-DCB5-85DD6D4F2641">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 12:56:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Patron ID of the customer who is under 18 years old.  Foreign key to customer_id column of customers table.]]></commentInRDBMS>
+<generatorID>AA93069C-8A43-44BA-570A-1F6DD8355EA7</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>AE2EB758-29F1-BA14-FFFC-D1377644602A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sex" id="35C9F186-7B58-A625-D6F2-697458507907">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:08:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[Sex (M,F).]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<constraintName>customers_sex_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description=""/>
+<valueDef value="M" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cre_date" id="8F69463D-4D31-2D60-DBDA-F6B4FCAD90FA">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 12:32:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Creation date of customer's account. Sysdate.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="address_id" id="A329A600-3121-9234-59E5-4164927BA099">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-18 11:02:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address ID for thecustomers.  Foreign key to address_id column in the addresses table.]]></commentInRDBMS>
+<generatorID>25BF1B70-59FC-726D-D48A-E213193EF0E8</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<referedAttribute>CD222747-6A40-A1A4-A8F9-AFC8BBFB0365</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="69C5E69B-5F6D-41DD-C395-FC6F66990997" name="customers_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-25 11:07:39 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AE2EB758-29F1-BA14-FFFC-D1377644602A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

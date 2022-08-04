@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2D2639AE-98F0-4229-7AA2-DB33A3417B6D" name="addresses">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>25FD01E2-3C53-4990-1F7D-9253741A735B</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="address_id" id="B922ADD9-F9A9-D545-20DF-432231568FEC">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Primary Key of addresses table.]]></commentInRDBMS>
+<generatorID>CD222747-6A40-A1A4-A8F9-AFC8BBFB0365</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="st_name" id="4E95BB68-3B16-BE86-DB5B-7F3DCF2C2D92">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-16 11:11:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of street. ]]></commentInRDBMS>
+<generatorID>9A76A003-BCB3-CDBD-6B10-63253468906D</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="house_no" id="57186562-9E8C-232A-BA84-4B6358648E73">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[House's number.]]></commentInRDBMS>
+<generatorID>119D175A-CA49-C932-39BA-78CD69886097</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apartment" id="4E6C865F-112C-BAD6-1988-01364854A139">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Optional apartment number.]]></commentInRDBMS>
+<generatorID>9E4E6A04-A31C-63E4-6993-C8007F557D3A</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="postcode" id="ECA76A95-00E4-6CE3-D6D1-E58CED5C9CD7">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Postcode polish standard..Third char should be dash.]]></commentInRDBMS>
+<generatorID>DAF242F7-1504-12BA-F851-DD1DB90B8F57</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>addresses_postcode_ck</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12cR2" definition="SUBSTR(postcode, 3,1) = &apos;-&apos;  AND TO_NUMBER(REPLACE(postcode, &apos;-&apos;, &apos;&apos;)) &gt; 1  AND REGEXP_COUNT(postcode,&apos; &apos;) = 0"/>
+</checkConstraint>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="city" id="DE7DE5F1-8A65-952E-C6FF-EA3D271A3B0E">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of city.]]></commentInRDBMS>
+<generatorID>DDC5C208-87D1-D146-57E7-5D92840A87B5</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="D7B44C34-92C3-C52F-C513-43FCA60D45E4">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number. Only numbers 0-9.]]></commentInRDBMS>
+<generatorID>EC9FCC68-A5E0-725F-69A7-7070845CF97A</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintComment><![CDATA[Checking if mobile length is 9 numbers without letters and other marks. ]]></constraintComment>
+<constraintName>addresses_phone_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12cR2" definition="REGEXP_COUNT(phone,&apos;\D&apos;) = 0"/>
+</checkConstraint>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="3AD01012-E73C-6558-EA67-3ECC880F2148">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address e-mail.]]></commentInRDBMS>
+<generatorID>71253F46-130D-5A88-256C-3826FC9F05EF</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>addresses_email_ck</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12cR2" definition="REGEXP_COUNT(email, &apos;@&apos;) = 1"/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7C8F6A8A-4E24-EF03-0234-916946D53842" name="addresses_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-18 14:27:24 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B922ADD9-F9A9-D545-20DF-432231568FEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

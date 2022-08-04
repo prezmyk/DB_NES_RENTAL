@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DA4B0EFC-6A79-A435-92CC-67A817357BBC" containerWithKeyObject="50AFB7F4-10DD-7187-2298-1E8DC6F35E92" localFKIndex="7BC18777-B6EF-395B-EC00-D3666E6CA30D" name="reservations_customers_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 15:48:48 UTC</createdTime>
+<generatorID>CD5F4921-91AA-2341-937D-99A6CE6E7BB0</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<referredTableLongName>customers</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>941CD3AD-604B-26E1-5890-35433799F8F2</referredTableID>
+<keyObject>3C9CC451-C817-4413-1B2F-8FA813D4BDFF</keyObject>
+<referredKeyID>3C9CC451-C817-4413-1B2F-8FA813D4BDFF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>customer_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

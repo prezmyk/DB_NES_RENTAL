@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="games_cartridges" directorySegmentName="seg_0" id="CBFF3CE3-4197-58A8-3242-011EA923B6A1">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="game_id" id="37413ADC-F3EC-1DFE-78FB-31E4F075B2AC">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="cartrige_id" id="EE3EF460-08A6-E5B0-40AC-1CC75F6C1066">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="games_cartriges_games_fk" id="7A98E808-FB26-020F-580C-048AD2B352C5">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="games_cartriges_cartriges_fk" id="D50937D7-6B9A-FE62-C61A-929246BA06F8">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="games_cartriges_pk" id="410C43B7-D8ED-A5D7-0A28-D61945611776">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:10:57 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

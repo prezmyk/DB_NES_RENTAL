@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<StoredProcedureOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.StoredProcedureOraclev10g" name="add_emp" directorySegmentName="seg_0" id="58381979-5B40-31C1-B0D7-FD48B637A015">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-16 14:34:21 UTC</createdTime>
+<notes><![CDATA[create or replace PROCEDURE add_emp (    
+    p_fname    employees.first_name%type,
+    p_lname  employees.last_name%type,
+    p_birth_date     employees.birth_date%type,
+   p_hire_date employees.hire_date%type,	    
+p_sex    employees.sex%type,
+    p_data_zat    pracownik.data_zat%type
+    )
+IS 
+    v_p_id     pracownik.p_id%type;
+    v_imie     pracownik.imie%type;
+    v_nazwisko pracownik.nazwisko%type;
+    v_plec     pracownik.plec%type;
+
+BEGIN
+SELECT CONCAT(TO_CHAR(sysdate, 'YYMMDD'),s1_test.nextval) INTO v_p_id FROM DUAL;
+
+    v_imie      := p_imie;  
+    v_nazwisko  := p_nazwisko;  
+    v_plec      := p_plec;  
+
+INSERT INTO pracownik (p_id, imie, nazwisko, data_ur, plec, data_zat)                           
+VALUES      ( TO_CHAR(UPPER(CONCAT(SUBSTR(v_imie,1,1),SUBSTR(v_nazwisko,1,1))
+                            || CONCAT(TRIM(v_p_id), v_plec)))
+            , INITCAP(p_imie), INITCAP(p_nazwisko)
+            , p_data_ur,UPPER(p_plec), p_data_zat);
+
+END;]]></notes>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<source>create or replace PROCEDURE add_emp (    
+  -- employees table columns
+  p_fname         employees.first_name%type,
+  p_lname         employees.last_name%type,
+  p_birth_date    employees.birth_date%type,
+  p_hire_date     employees.hire_date%type,	    
+  p_sex           employees.sex%type,
+  
+  -- addresses table columns
+  p_city          addresses.city%type,
+  p_postcode      addresses.postcode%type, 
+  p_st_name       addresses.st_name%type,
+  p_house_no      addresses.house_no%type,   
+  p_apartment     addresses.apartment%type DEFAULT NULL,
+  p_phone         addresses.phone%type     DEFAULT NULL,
+  p_email         addresses.email%type     DEFAULT NULL
+    )
+IS 
+    v_employee_id   employees.employee_id%type;
+
+BEGIN
+SELECT CONCAT(TO_CHAR(sysdate, &apos;YYMMDD&apos;),cust_emp_seq.nextval) 
+        INTO v_employee_id FROM DUAL;
+
+INSERT INTO 
+addresses (address_id,      st_name ,           house_no,   postcode ,  city,           apartment,   phone,   email )    
+VALUES   (v_employee_id ,INITCAP(p_st_name) ,p_house_no,  p_postcode ,INITCAP(p_city), p_apartment, p_phone, p_email); 
+
+INSERT INTO 
+employees (employee_id,  first_name,        last_name,          birth_date,      hire_date,    sex,          address_id) -- employees table columns
+VALUES    ( v_employee_id, INITCAP(p_fname),  INITCAP(p_lname),   p_birth_date,    p_hire_date,  UPPER(p_sex),  v_employee_id);              
+
+END;</source>
+</StoredProcedureOraclev10g>

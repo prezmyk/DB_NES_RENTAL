@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="reservations_cust_fk" directorySegmentName="seg_0" id="CD5F4921-91AA-2341-937D-99A6CE6E7BB0">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 13:29:52 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<engineerTo>
+<item key="3C3D58EF-CC3B-ADBD-0AB5-8A34CEB570B9" value="true"/>
+</engineerTo>
+<sourcePk>D21A82C5-8117-66CD-951D-4C1B01BB4AB0</sourcePk>
+<targetPk>69C5E69B-5F6D-41DD-C395-FC6F66990997</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>AEC91E81-D9B7-2F97-EBE2-4FEFD3A0474E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>5475AB1D-6FA4-83AD-D78B-6B33D103DFA4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

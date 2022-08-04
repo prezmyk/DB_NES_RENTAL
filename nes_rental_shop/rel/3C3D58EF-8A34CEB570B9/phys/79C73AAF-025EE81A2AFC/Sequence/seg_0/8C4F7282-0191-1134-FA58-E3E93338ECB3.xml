@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SequenceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SequenceOraclev10g" name="cartridges_id_seq" directorySegmentName="seg_0" id="8C4F7282-0191-1134-FA58-E3E93338ECB3">
+<createdBy>PzK</createdBy>
+<createdTime>2022-08-01 11:04:16 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<incrementBy>10</incrementBy>
+<minValue>1000</minValue>
+<noCache>YES</noCache>
+<order>YES</order>
+<startWith>1000</startWith>
+</SequenceOraclev10g>

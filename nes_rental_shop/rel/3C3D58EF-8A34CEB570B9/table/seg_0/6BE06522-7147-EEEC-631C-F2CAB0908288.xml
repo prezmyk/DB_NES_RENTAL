@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6BE06522-7147-EEEC-631C-F2CAB0908288" name="cartridges_rentals">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<ordsAlias>cartriges_lends</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cartridge_id" id="0954C3B2-E2B0-730B-0A26-FE64D8E62551">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Multiple Primary Key with column rental_id of cartridges_rentals table.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F22C5EA-BF22-EA80-411E-08F03DC69FE7" referredColumn="3EB03058-B77C-29A3-1E57-B658F96871A1"/>
+</associations>
+</Column>
+<Column name="rental_id" id="E1F2E31D-086C-89E8-752B-F22EA6C3E2A2">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Multiple Primary Key with column cartridgel_id of cartridges_rentals table.]]></commentInRDBMS>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="66FAC8A0-A324-DA7E-FCDD-6CDD7C9FBFA5" referredColumn="5823E50D-7C15-958B-04C5-5D6CFFBFA8B6"/>
+</associations>
+</Column>
+<Column name="out_date" id="C0D9F96A-3E3D-70A8-7030-31561704669A">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<comment><![CDATA[Darte of rent. sysdate.]]></comment>
+<generatorID>894E4F31-F136-F7BB-A938-B01AB6FF5A85</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<constraintName>df_cart_lend_out_date</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="in_date" id="833AE0E7-7A13-020E-F859-5B811354DF20">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<comment><![CDATA[Date of back.]]></comment>
+<generatorID>2B3942F8-AD85-EBB0-E3C5-6E9E77C6DD7D</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="94A6DDD9-9F0D-693A-491A-3773ECB5D0DA" name="cartriges_rental_pk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0954C3B2-E2B0-730B-0A26-FE64D8E62551"/>
+<colUsage columnID="E1F2E31D-086C-89E8-752B-F22EA6C3E2A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BDA7272-2C6D-4AE1-615D-331457826D29" name="cartriges_rentals_cartriges_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>C8FDBF00-7B26-6404-78E2-E8148C3FB1B2</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0954C3B2-E2B0-730B-0A26-FE64D8E62551"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="32D0CABD-3771-A31F-21FA-BB4E10B7E5A9" name="cartriges_rentals_rentas_fk">
+<createdBy>PzK</createdBy>
+<createdTime>2022-06-28 13:03:43 UTC</createdTime>
+<generatorID>C8FDBF00-7B26-6404-78E2-E8148C3FB1B2</generatorID>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1F2E31D-086C-89E8-752B-F22EA6C3E2A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

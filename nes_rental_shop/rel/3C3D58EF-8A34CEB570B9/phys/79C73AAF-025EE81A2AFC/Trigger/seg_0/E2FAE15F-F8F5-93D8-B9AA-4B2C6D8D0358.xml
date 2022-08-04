@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="reservations_tr" directorySegmentName="seg_0" id="E2FAE15F-F8F5-93D8-B9AA-4B2C6D8D0358">
+<createdBy>PzK</createdBy>
+<createdTime>2022-07-23 15:49:04 UTC</createdTime>
+<ownerDesignName>nes_rental_shop</ownerDesignName>
+<actions>UPDATE</actions>
+<body><![CDATA[BEGIN
+    raise_application_error(-20002
+    , 'You can'|| ''''|| 't update this table. Delete record and add again');
+END;
+/]]></body>
+<triggerTime>BEFORE</triggerTime>
+<scope>FOR EACH STATEMENT</scope>
+<table>50AFB7F4-10DD-7187-2298-1E8DC6F35E92</table>
+</TriggerOraclev10g>
