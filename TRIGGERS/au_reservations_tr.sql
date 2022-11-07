@@ -1,4 +1,4 @@
-create or replace TRIGGER au_reservations AFTER
+CREATE OR REPLACE TRIGGER au_reservations_tr AFTER
     DELETE ON reservations
     FOR EACH ROW
 BEGIN
