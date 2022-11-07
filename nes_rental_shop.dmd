@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="nes_rental_shop" id="A78C8B3D-CF88-E586-2C6F-AE34697A9558" version="3.5">
-<createdBy>PzK</createdBy>
-<createdTime>2022-06-25 09:44:55 UTC</createdTime>
-<ownerDesignName>pegasus</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>A78C8B3D-CF88-E586-2C6F-AE34697A9558</designId>
-</OSDM_Design>
